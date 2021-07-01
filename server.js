@@ -3,7 +3,7 @@ const http = require("http")
 let PORT = process.env.PORT || 3005;
 const server = http.createServer((req, res) => {})
 
-server.listen(PORT, () => {
+server.listen(process.env.PORT || 3005, () => {
     console.log("Listening on port 3005...")
 })
 
