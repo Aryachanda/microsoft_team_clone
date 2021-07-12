@@ -96,12 +96,35 @@ function joinCall() {
 
 let isAudio = true
 function muteAudio() {
-    isAudio = !isAudio
+    if(isAudio == true)
+        isAudio = !isAudio
+    localStream.getAudioTracks()[0].enabled = isAudio
+}
+function unmuteAudio() {
+    if(isAudio == false)
+       isAudio = !isAudio
     localStream.getAudioTracks()[0].enabled = isAudio
 }
 
 let isVideo = true
 function muteVideo() {
-    isVideo = !isVideo
+    if(isVideo == true)
+      isVideo = !isVideo
     localStream.getVideoTracks()[0].enabled = isVideo
+}
+
+function unmuteVideo() {
+    if(isVideo == false)
+       isVideo = !isVideo
+    localStream.getVideoTracks()[0].enabled = isVideo
+}
+
+function redirect(){
+    location.assign("../home.html")
+}
+
+function chatting(){
+    window.open(
+            "http://localhost:4000/", "_blank");
+    
 }

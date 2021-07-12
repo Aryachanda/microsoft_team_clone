@@ -3,22 +3,61 @@
     <head>
         <link rel="stylesheet" href="../style.css">
     </head>
+    <style type="text/css">
+        .btn-group button {
+      background-color: #52519b; /* Green background */
+      border: 1px solid rgb(73, 122, 197); /* Green border */
+      color: white; /* White text */
+      padding: 10px 25px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 5%;
+      
+    }
+    
+    .btn-group button:hover {
+      background-color: #0f0935;
+    }
+    .user-name{
+        flex-grow: 1;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        padding: 0 12px;
+        background-color: rgb(212, 214, 214);
+}
+    .client{
+      margin-top: 20%;
+      margin-bottom: 20%;
+    }
+    body{
+        background-image: url("../video2.jpg");
+    }
+    </style>
     <body>
-        <div>
-            <input placeholder="Enter username..."
-                    type="text"
-                    id="username-input" /><br>
-            <button onclick="joinCall()">Join Call</button>
+        <center><div class="client">
+            <input placeholder="Enter Passcode..."
+                    type="integer"
+                    class="user-name"
+                    id="username-input" /><br><br>
+            <div class="btn-group">     
+            <button onclick="joinCall()">Join Call</button></div>   
         </div>
         <div id="video-call-div">
             <video muted id="local-video" autoplay></video>
             <video id="remote-video" autoplay></video>
             <div class="call-action-div">
+                <div class="btn-group">
                 <button onclick="muteVideo()">Mute Video</button>
+                <button onclick="unmuteVideo()">Un-mute Video</button>
                 <button onclick="muteAudio()">Mute Audio</button>
+                <button onclick="unmuteAudio()">Un-mute Audio</button>
+                <button onclick="redirect()">Call-End</button>
+                <button onclick="chatting()">Chat</button>
+                </div>
             </div>
         </div>
-        <script src="./receiver.js"></script>
+        <script src="./receiver.js"></script></center>
     </body>
 
 </html>

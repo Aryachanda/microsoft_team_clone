@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style type="text/css">
+    
+    
+   div{background-color: rgb(152, 197, 233);
+       width: 400px;
+       height: 300px;
+       border: 1px solid rgb(46, 173, 110);
+       margin: 0 auto;
+       padding: 60px;
+       box-sizing: border-box;
+       border-radius: 10%;
+       color:black;
+   }
+body{
+    background-image: url(video12.jpg);
+    color:cornsilk;
+}
+.username-input,password-input {
+  
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 0 4px;
+  background-color: rgb(212, 214, 214);
+  
+}
+.btn{
+    background-color: #52519b; /* Green background */
+      border: 1px solid rgb(73, 122, 197); /* Green border */
+      color: white; /* White text */
+      padding: 10px 25px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 5%;
+}
+.text{
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+</style>
+<body>
+    <center><h1>Login-Page</h1>
+        <hr>
+    <div class="text">Username:<br>
+        <input type = "text", placeholder="Enter username", class="username-input", id="username"> <br><br>
+        Password:<br>
+        <input type = "password", placeholder="Enter Password", class="username-input", id="password"><br><br><br>
+        
+        <button class="btn" onclick="login()">Submit</button>
+    </div>
+</center>
+<script type="text/javascript">
+
+function login(){
+    let uname = document.getElementById('username').value;
+    let pas = document.getElementById('password').value;
+    const userhistory = ["admin","company","users","microsoft"];
+    const passhistory = ["123","password","login","12345"];
+    let p = false;
+    let q = false;
+    for(let i=0;i<4;i++){
+        if(uname == userhistory[i])
+           p = true;
+        if(pas == passhistory[i])
+           q = true;   
+    }
+    if(p && q){
+        location.assign("home.html");
+    }
+    else{
+        window.alert("login failed");
+    }
+}
+
+</script>
+</body>
+</html>

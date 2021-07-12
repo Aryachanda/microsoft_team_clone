@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Page</title>
+</head>
+<style>
+    
+   .btn-group button {
+      background-color: #52519b; /* Green background */
+      border: 1px solid rgb(73, 122, 197); /* Green border */
+      color: white; /* White text */
+      padding: 10px 25px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 45%;
+      margin-left: 20px;
+      margin-right: 20px;
+      position: relative;
+      
+    }
+    
+    .btn-group button:hover {
+      background-color: #0f0935;
+    }
+    .btn{
+        background-color: rgb(26, 36, 63);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-shadow: blue;
+        
+        }
+    body{
+        background-color: silver ;
+        background-image: url('video5.jpg');
+    }
+    .text{
+        margin-top: 200px;
+    }
+    </style>
+<body>
+    <center><h1>Video-Chat App <hr></h1></center>
+    <center>
+        <div class="btn">
+    <div class="btn-group">
+     <button onclick="call()"><h2>Call</h2></button>
+     <button onclick="join()"><h2>Join call</h2></button>
+     <button onclick="chat()"><h2>Chat</h2></button>
+     <button onclick="calender()"><h2>Calendar</h2></button>
+    </div>
+    </div>
+    <div class="text">
+    <h2>Let's use these features for fun........</h2></div>
+    </center>
+    <script type="text/javascript">
+        function call(){
+            location.assign("sender/sender.html");
+            }
+        function join(){
+            location.assign("receiver/receiver.html");
+            }
+        function chat(){
+            location.assign("http://localhost:4000/");
+            }
+        function calender(){
+            location.assign("calender/index.html");
+            }    
+        </script>
+</body>
+</html>
